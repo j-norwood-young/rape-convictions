@@ -60,14 +60,12 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.ProvidePlugin({
-            $: 'jquery'
-        }),
         new MiniCssExtractPlugin({
             filename: 'style.css',
         }),
         new HtmlWebpackPlugin({
-            title: "Convicted Rapist",
+            title: "Rape Convictions in South Africa",
+            template: "./src/index.html"
         }),
     ],
     stats: {
