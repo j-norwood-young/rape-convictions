@@ -38576,6 +38576,7 @@ __webpack_require__(/*! ./less/style.less */ "./src/less/style.less");
 var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
 
+var number_format = d3__WEBPACK_IMPORTED_MODULE_0__["format"](",.2r");
 var total_rapes = 40035;
 var nodes = [{
   name: "Rapes per annum",
@@ -38584,7 +38585,7 @@ var nodes = [{
 }, {
   name: "Reported",
   value: total_rapes,
-  description: "Sourced from the <a href=\"https://www.saps.gov.za/services/crimestats.php\">South African Police Service 2018/2019 Crime Statistics</a>"
+  description: "South Africa had the <a href=\"https://en.wikipedia.org/wiki/Rape_statistics#South_Africa\">highest rapes per capita in the world in 2010</a>, at 95.9 per 100,000. The number has since dropped to 70.5/100,000, but is still a shockingly high number. Source: the <a href=\"https://www.saps.gov.za/services/crimestats.php\">South African Police Service 2018/2019 Crime Statistics</a>"
 }, {
   name: "Arrests",
   value: total_rapes * 0.578,
@@ -38592,21 +38593,20 @@ var nodes = [{
 }, {
   name: "Accepted for Prosecution",
   value: total_rapes * 0.345,
-  description: "34.5% of cases are accepted for prosecution, according to <a href=\"http://www.mrc.ac.za/sites/default/files/files/2017-10-30/RAPSSAreport.pdf\">\"Rape Justice in South Africa\"</a>."
+  description: "Only 34.5% of cases opened are ever accepted for prosecution, according to <a href=\"http://www.mrc.ac.za/sites/default/files/files/2017-10-30/RAPSSAreport.pdf\">\"Rape Justice in South Africa\"</a>. A report on <a href=\"https://genderlinks.org.za/programme-web-menu/publications/the-war-at-home-gbv-indicators-project-2011-08-16/\">gender-based violence in Gauteng</a> found that one in 13 women reported non-partner rape and only one in 25 rapes were reported to the police."
 }, {
   name: "Started Trial",
   value: total_rapes * 0.185,
-  description: "18.5% of cases reach trial, according to <a href=\"http://www.mrc.ac.za/sites/default/files/files/2017-10-30/RAPSSAreport.pdf\">\"Rape Justice in South Africa\"</a>."
+  description: "18.5% of cases reach trial, according to <a href=\"http://www.mrc.ac.za/sites/default/files/files/2017-10-30/RAPSSAreport.pdf\">\"Rape Justice in South Africa\"</a>. Rape is <a href=\"www.justice.gov.za/legislation/acts/2007-032.pdf#page=10\">defined quite broadly in South Africa</a>: \"Any person (\u2018A\u2019) who unlawfully and intentionally commits an act of sexual penetration with a complainant (\u2018B\u2019), without the consent of B, is guilty of the offence of rape.\" "
 }, {
   name: "Guilty Convictions",
   value: total_rapes * 0.086,
-  description: "Only 8.6% of cases reported to police result in a guilty conviction, according to <a href=\"http://www.mrc.ac.za/sites/default/files/files/2017-10-30/RAPSSAreport.pdf\">\"Rape Justice in South Africa\"</a>."
+  description: "Only 8.6% of cases reported to police result in a guilty conviction, according to <a href=\"http://www.mrc.ac.za/sites/default/files/files/2017-10-30/RAPSSAreport.pdf\">\"Rape Justice in South Africa\"</a>. Of those convictions, 72.6% of the rapists would ever see jail time. That means that of the ".concat(number_format(total_rapes * 9), " rapes that we started with, only ").concat(number_format(total_rapes * 0.086 * 0.726), " (").concat(number_format(total_rapes * 0.086 * 0.726 / (total_rapes * 9) * 100), "%) result in prison for the perpetrator.")
 }];
 var max = d3__WEBPACK_IMPORTED_MODULE_0__["max"](nodes, function (d) {
   return d.value;
 });
 var scale = d3__WEBPACK_IMPORTED_MODULE_0__["scaleLinear"]().domain([0, max]).range([1, 100]);
-var number_format = d3__WEBPACK_IMPORTED_MODULE_0__["format"](",.2r");
 d3__WEBPACK_IMPORTED_MODULE_0__["select"]("body").append("h1").text("Rape Convictions in South Africa");
 var master_node_container = d3__WEBPACK_IMPORTED_MODULE_0__["select"]("body").append("div").attr("id", "master_node_container");
 master_node_container.append("div").attr("id", "master_node").style("width", "100vw");
@@ -38620,7 +38620,6 @@ containers.append("h2").text(function (d) {
 containers.append("p").attr("class", "value").text(function (d) {
   return number_format(d.value);
 });
-containers.append("div").attr("class", "break");
 containers.append("p").attr("class", "description").html(function (d) {
   return d.description;
 });
