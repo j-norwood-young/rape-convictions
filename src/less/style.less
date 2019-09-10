@@ -8,6 +8,8 @@ h1 {
     font-size: 40pt;
     text-align: center;
     padding: 80px 10px 0px 10px;
+    z-index: 100;
+    position: relative;
 }
 
 a {
@@ -55,11 +57,27 @@ a {
         border: 6px black solid;
     }
 }
-.node {
+.node, #master_node {
     height: 120vh;
     background-color: black;
     position: absolute;
     min-width: 1px;
+}
+
+#master_node_container {
+    position: fixed;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#master_node {
+    transition-property: "width";
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    
 }
 
 .break {
@@ -69,9 +87,12 @@ a {
 
 footer {
     font-size: 9pt;
-    font-color: black;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
     padding: 60px 20px 30px 20px;
     text-align: center;
     border-top: 6px black solid;
+    background-color: white;
+    position: relative;
+    z-index: 1001;
 }
