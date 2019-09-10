@@ -1,0 +1,13 @@
+source,target,value,source
+Total Rapes,Unreported Rapes,30026.25,One in four of rapes are reported 
+Total Rapes,Reported Rapes,40035.00,2017/2018 SAPS Statistics
+Reported Rapes,Arrest,22819.95,South African Medical Research Council’s gender and health research unit
+Reported Rapes,No Arrest,17215.05,South African Medical Research Council’s gender and health research unit
+Arrest,Referred for Prosection,14832.97,South African Medical Research Council’s gender and health research unit
+Arrest,Not Referred for Procecution,7986.98,South African Medical Research Council’s gender and health research unit
+Referred for Prosection,Accepted for Prosecusion,5102.54,South African Medical Research Council’s gender and health research unit
+Referred for Prosection,Not Accepted for Prosecusion,9730.43,South African Medical Research Council’s gender and health research unit
+Accepted for Prosecusion,Started Trial,943.97,South African Medical Research Council’s gender and health research unit
+Accepted for Prosecusion,Never Started Trial,4158.57,South African Medical Research Council’s gender and health research unit
+Started Trial,Guilty Conviction,438.95,South African Medical Research Council’s gender and health research unit
+Started Trial,Not Guilty,505.02,South African Medical Research Council’s gender and health research unit
