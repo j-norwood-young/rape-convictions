@@ -3,18 +3,18 @@ const $ = require("jquery");
 
 import * as d3 from 'd3';
 
-const number_format = d3.format(",.2r");
+const number_format = d3.format(",.0f");
 const total_rapes = 40035;
 const nodes = [
     { 
         name: "Rapes per annum",
         value: total_rapes * 9,
-        description: `One in nine rapes are reported, according to <a href="http://content.time.com/time/world/article/0,8599,2057744,00.html">Time</a>. According to the Gauteng Gender Based Violence Indicators Project (2010), this is a very conservative number, with that report estimating that "overall only one in 25 rapes had been reported to the police".`
+        description: `While ${ number_format(total_rapes) } were reported to the South African Police Service in 2017/2018, the actual number of rapes is suspected to be much higher. An estimated one in nine rapes are reported, according to <a href="http://content.time.com/time/world/article/0,8599,2057744,00.html">Time</a>, which is the conservative number we use in this report. Research by the Gauteng Gender Based Violence Indicators Project (2010) estimates that "overall only one in 25 rapes had been reported to the police". This would put the total at ${ number_format(total_rapes * 25) } per annum.`
     },
     {
         name: "Reported",
         value: total_rapes,
-        description: `South Africa had the <a href="https://en.wikipedia.org/wiki/Rape_statistics#South_Africa">highest rapes per capita in the world in 2010</a>, at 95.9 per 100,000. The number has since dropped to 70.5/100,000, but is still a shockingly high number. Source: the <a href="https://www.saps.gov.za/services/crimestats.php">South African Police Service 2018/2019 Crime Statistics</a>`
+        description: `South Africa had the <a href="https://en.wikipedia.org/wiki/Rape_statistics#South_Africa">highest rapes per capita in the world in 2010</a>, at 95.9 per 100,000. The number has since dropped to 70.5, but is still shockingly high. Source: <a href="https://www.saps.gov.za/services/crimestats.php">South African Police Service 2018/2019 Crime Statistics</a>`
     },
     {
         name: "Arrests",
@@ -27,14 +27,14 @@ const nodes = [
         description: `Only 34.5% of cases opened are ever accepted for prosecution, according to <a href="http://www.mrc.ac.za/sites/default/files/files/2017-10-30/RAPSSAreport.pdf">"Rape Justice in South Africa"</a>. A report on <a href="https://genderlinks.org.za/programme-web-menu/publications/the-war-at-home-gbv-indicators-project-2011-08-16/">gender-based violence in Gauteng</a> found that one in 13 women reported non-partner rape and only one in 25 rapes were reported to the police.`
     },
     {
-        name: "Started Trial",
+        name: "Trial Commenced",
         value: total_rapes * 0.185,
         description: `18.5% of cases reach trial, according to <a href="http://www.mrc.ac.za/sites/default/files/files/2017-10-30/RAPSSAreport.pdf">"Rape Justice in South Africa"</a>. Rape is <a href="www.justice.gov.za/legislation/acts/2007-032.pdf#page=10">defined quite broadly in South Africa</a>: "Any person (‘A’) who unlawfully and intentionally commits an act of sexual penetration with a complainant (‘B’), without the consent of B, is guilty of the offence of rape." `
     },
     {
         name: "Guilty Convictions",
         value: total_rapes * 0.086,
-        description: `Only 8.6% of cases reported to police result in a guilty conviction, according to <a href="http://www.mrc.ac.za/sites/default/files/files/2017-10-30/RAPSSAreport.pdf">"Rape Justice in South Africa"</a>. Of those convictions, 72.6% of the rapists would ever see jail time. That means that of the ${ number_format(total_rapes * 9) } rapes that we started with, only ${ number_format(total_rapes * 0.086 * 0.726) } (${ number_format((total_rapes * 0.086 * 0.726) / (total_rapes * 9) * 100) }%) result in prison for the perpetrator.`
+        description: `Only 8.6% of cases reported to police result in a guilty conviction, according to <a href="http://www.mrc.ac.za/sites/default/files/files/2017-10-30/RAPSSAreport.pdf">"Rape Justice in South Africa"</a>. Of those convictions, 72.6% of the rapists would ever see jail time. That means that of the ${ number_format(total_rapes * 9) } rapes, only ${ number_format(total_rapes * 0.086 * 0.726) } (${ number_format((total_rapes * 0.086 * 0.726) / (total_rapes * 9) * 100) }%) resulted in prison for the perpetrator.`
     }
 ]
 
@@ -69,12 +69,14 @@ const containers = nodes_el
     .attr("data-value", d => scale(d.value))
     ;
 
-containers
+const text = containers.append("div").attr("class", "text-container");
+
+text
     .append("h2")
     .text(d => d.name)
     ;
 
-containers
+text
     .append("p")
     .attr("class", "value")
     .text(d => number_format(d.value))
@@ -105,7 +107,7 @@ $(function() {
                 vals.push($(el).data("value"));
             }
         });
-        let w = d3.max(vals);
+        let w = d3.min(vals);
         $("#master_node").css("width", `${w}vw`);
     })
 });

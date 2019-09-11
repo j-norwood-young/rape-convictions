@@ -141,10 +141,15 @@ a {
 }
 .node-container {
   height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   align-items: center;
   justify-content: center;
+}
+.node-container .text-container {
+  z-index: 101;
+  color: #c61111;
+  position: relative;
+  display: flex;
 }
 .node-container h2 {
   font-size: 24pt;
@@ -179,6 +184,7 @@ a {
   background-color: #ffffff;
   padding: 20px;
   border: 6px black solid;
+  justify-self: center;
 }
 .node,
 #master_node {

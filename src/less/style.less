@@ -18,10 +18,16 @@ a {
 
 .node-container {
     height: 100vh;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    // flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    .text-container {
+        z-index: 101;
+        color: @red;
+        position: relative;
+        display: flex;
+    }
     h2 {
         font-size: 24pt;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -55,6 +61,7 @@ a {
         background-color: rgba(255,255,255,1);
         padding: 20px;
         border: 6px black solid;
+        justify-self: center;
     }
 }
 .node, #master_node {
