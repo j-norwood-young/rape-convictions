@@ -4,7 +4,7 @@ const $ = require("jquery");
 import * as d3 from 'd3';
 
 const number_format = d3.format(",.0f");
-const total_rapes = 40035;
+const total_rapes = 41583;
 const nodes = [
     { 
         name: "Rapes per annum",
@@ -14,7 +14,7 @@ const nodes = [
     {
         name: "Reported",
         value: total_rapes,
-        description: `South Africa had the <a href="https://en.wikipedia.org/wiki/Rape_statistics#South_Africa">highest rapes per capita in the world in 2010</a>, at 95.9 per 100,000. The number has since dropped to 70.5, but is still shockingly high. Source: <a href="https://www.saps.gov.za/services/crimestats.php">South African Police Service 2018/2019 Crime Statistics</a>`
+        description: `South Africa had the <a href="https://en.wikipedia.org/wiki/Rape_statistics#South_Africa">highest reported rapes per capita in the world in 2010</a>, at 95.9 per 100,000. The number has since dropped to 70.5, but is still shockingly high. Source: <a href="https://www.saps.gov.za/services/crimestats.php">South African Police Service 2018/2019 Crime Statistics</a>`
     },
     {
         name: "Arrests",

@@ -127,12 +127,12 @@ table {
   border-spacing: 0;
 }
 h1 {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: "Roboto Condensed", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   color: #c61111;
-  background-color: black;
+  background-color: #1c1c1c;
   font-size: 40pt;
   text-align: center;
-  padding: 80px 10px 0px 10px;
+  padding: 80px 10px 20px 10px;
   z-index: 100;
   position: relative;
 }
@@ -153,7 +153,7 @@ a {
 }
 .node-container h2 {
   font-size: 24pt;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: "Roboto Condensed", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: center;
   margin-top: 100px;
   width: 100%;
@@ -167,29 +167,29 @@ a {
 }
 .node-container p.value {
   font-size: 24pt;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Times New Roman", seif;
   text-align: center;
   margin-top: 100px;
   width: 100%;
   flex-grow: 1;
 }
 .node-container p.description {
-  font-size: 10pt;
-  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12pt;
+  font-family: "Times New Roman", seif;
   flex-grow: 1;
   text-align: center;
   width: 100%;
   margin: 0px 20px;
-  max-width: 200px;
+  max-width: 260px;
   background-color: #ffffff;
   padding: 20px;
-  border: 6px black solid;
+  border: 6px #1c1c1c solid;
   justify-self: center;
 }
 .node,
 #master_node {
   height: 100vh;
-  background-color: black;
+  background-color: #1c1c1c;
   position: absolute;
   min-width: 1px;
 }
@@ -212,11 +212,11 @@ a {
 }
 footer {
   font-size: 9pt;
-  color: black;
-  font-family: Arial, Helvetica, sans-serif;
+  color: #1c1c1c;
+  font-family: "Roboto Condensed", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   padding: 60px 20px 30px 20px;
   text-align: center;
-  border-top: 6px black solid;
+  border-top: 6px #1c1c1c solid;
   background-color: white;
   position: relative;
   z-index: 1001;

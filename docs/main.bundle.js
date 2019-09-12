@@ -38577,7 +38577,7 @@ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"
 
 
 var number_format = d3__WEBPACK_IMPORTED_MODULE_0__["format"](",.0f");
-var total_rapes = 40035;
+var total_rapes = 41583;
 var nodes = [{
   name: "Rapes per annum",
   value: total_rapes * 9,
@@ -38585,7 +38585,7 @@ var nodes = [{
 }, {
   name: "Reported",
   value: total_rapes,
-  description: "South Africa had the <a href=\"https://en.wikipedia.org/wiki/Rape_statistics#South_Africa\">highest rapes per capita in the world in 2010</a>, at 95.9 per 100,000. The number has since dropped to 70.5, but is still shockingly high. Source: <a href=\"https://www.saps.gov.za/services/crimestats.php\">South African Police Service 2018/2019 Crime Statistics</a>"
+  description: "South Africa had the <a href=\"https://en.wikipedia.org/wiki/Rape_statistics#South_Africa\">highest reported rapes per capita in the world in 2010</a>, at 95.9 per 100,000. The number has since dropped to 70.5, but is still shockingly high. Source: <a href=\"https://www.saps.gov.za/services/crimestats.php\">South African Police Service 2018/2019 Crime Statistics</a>"
 }, {
   name: "Arrests",
   value: total_rapes * 0.578,

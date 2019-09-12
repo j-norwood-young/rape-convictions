@@ -1,13 +1,16 @@
 @import "reset.less";
 @red: #c61111;
+@black: #1c1c1c;
+@sans: "Roboto Condensed", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+@serif: "Times New Roman", seif;
 
 h1 {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: @sans;
     color: @red;
-    background-color: black;
+    background-color: @black;
     font-size: 40pt;
     text-align: center;
-    padding: 80px 10px 0px 10px;
+    padding: 80px 10px 20px 10px;
     z-index: 100;
     position: relative;
 }
@@ -30,7 +33,7 @@ a {
     }
     h2 {
         font-size: 24pt;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-family: @sans;
         text-align: center;
         margin-top: 100px;
         width: 100%;
@@ -43,7 +46,7 @@ a {
     }
     p.value {
         font-size: 24pt;
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: @serif;
         text-align: center;
         margin-top: 100px;
         width: 100%;
@@ -51,22 +54,22 @@ a {
     }
 
     p.description {
-        font-size: 10pt;
-        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12pt;
+        font-family: @serif;
         flex-grow: 1;
         text-align: center;
         width: 100%;
         margin: 0px 20px;
-        max-width: 200px;
+        max-width: 260px;
         background-color: rgba(255,255,255,1);
         padding: 20px;
-        border: 6px black solid;
+        border: 6px @black solid;
         justify-self: center;
     }
 }
 .node, #master_node {
     height: 100vh;
-    background-color: black;
+    background-color: @black;
     position: absolute;
     min-width: 1px;
 }
@@ -94,11 +97,11 @@ a {
 
 footer {
     font-size: 9pt;
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    color: @black;
+    font-family: @sans;
     padding: 60px 20px 30px 20px;
     text-align: center;
-    border-top: 6px black solid;
+    border-top: 6px @black solid;
     background-color: white;
     position: relative;
     z-index: 1001;
