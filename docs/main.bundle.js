@@ -38581,7 +38581,7 @@ var total_rapes = 41583;
 var nodes = [{
   name: "Rapes per annum",
   value: total_rapes * 9,
-  description: "While ".concat(number_format(total_rapes), " were reported to the South African Police Service in 2017/2018, the actual number of rapes is suspected to be much higher. An estimated one in nine rapes are reported, according to <a href=\"http://content.time.com/time/world/article/0,8599,2057744,00.html\">Time</a>, which is the conservative number we use in this report. Research by the Gauteng Gender Based Violence Indicators Project (2010) estimates that \"overall only one in 25 rapes had been reported to the police\". This would put the total at ").concat(number_format(total_rapes * 25), " per annum.")
+  description: "While ".concat(number_format(total_rapes), " were reported to the South African Police Service in 2018/2019, the actual number of rapes is suspected to be much higher. An estimated one in nine rapes are reported, according to <a href=\"http://content.time.com/time/world/article/0,8599,2057744,00.html\">Time</a>, which is the conservative number we use in this report. Research by the Gauteng Gender Based Violence Indicators Project (2010) estimates that \"overall only one in 25 rapes had been reported to the police\". This would put the total at ").concat(number_format(total_rapes * 25), " per annum.")
 }, {
   name: "Reported",
   value: total_rapes,
